@@ -78,9 +78,9 @@ console.log(pokemonCombined)
 
 function sumEveryOther(...numeros){
     let sum = 0
-    for (let index = 0; index < numeros.length; index++) {
-        sum += numeros[index]
-    }
+    numeros.forEach((num)=>{
+        sum += num
+    })
     console.log(sum)
 }
 
@@ -88,11 +88,11 @@ sumEveryOther(1,2,3,4,5,6)
 
 function addOnlyNums(...numeros){
     let sum = 0
-    for (let index = 0; index < numeros.length; index++) {
-        if(typeof numeros[index] === "number"){
-            sum += numeros[index]
+    numeros.forEach((num)=>{
+        if(typeof num === "number"){
+            sum += num
         }
-    }
+    })
     console.log(sum)
 }
 
@@ -114,6 +114,7 @@ function combineTwoArrays(array1,array2){
 combineTwoArrays([1,2,3], [4,5,6])
 
 
+
 // 3.Extras
 
 const HIGH_TEMPERATURES = {
@@ -130,11 +131,11 @@ const HIGH_TEMPERATURES = {
 
 function onlyUniques(...unicos){
     let verify = []
-    for (let index = 0; index < unicos.length; index++) {
-        if(!verify.includes(unicos[index])){
-            verify.push(unicos[index])
+    unicos.forEach((unic)=>{
+        if(!verify.includes(unic)){
+            verify.push(unic)
         }
-    }
+    })
     console.log(verify)
 }
 
@@ -142,10 +143,9 @@ onlyUniques(1,3,4,1,1,3,4)
 
 function combineAllArrays(...combine){
     let combineArray = []
-    for (let index = 0; index < combine.length; index++) {
-        combineArray.push(...combine[index])
-        
-    }
+    combine.forEach((comb)=>{
+        combineArray.push(...comb)
+    })
     console.log(combineArray)
 }
 
@@ -154,9 +154,9 @@ combineAllArrays([1,2,3],[4,5,6],[7,8,9])
 
 function sumAndSquare(...numeros){
     let suma = 0
-    for (let index = 0; index < numeros.length; index++) {
-        suma += numeros[index] ** 2
-    }
+    numeros.forEach((num)=>{
+        suma += num **2
+    })
     console.log(suma)
 }
 
